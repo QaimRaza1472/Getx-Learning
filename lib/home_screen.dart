@@ -30,26 +30,11 @@ class HomeScreen extends StatelessWidget {
 
           /// Elipse 3
           Positioned(
-            // left: -150,
-            // top: -20,
-            /// ok
             left: -145,
-            //top: -40,
-
-            //left: -width1*0.31,
-
-            //top: -height1*0.16,
             top: -width1 * 0.33,
             child: Container(
               height: 710,
               width: 710,
-
-              ///ok
-              //height: height1*0.8,
-              //width: height1*0.8,
-
-              //height: height1*0.99,
-              //width: height1*.99,
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 gradient: LinearGradient(
@@ -83,27 +68,11 @@ class HomeScreen extends StatelessWidget {
 
           /// Elipse 2
           Positioned(
-            //left: -150,
-            //top: -165,
-
-            /// ok
-            //left: -140,
             left: -145,
-            //top: -200,
-
-            //left: -width1*0.31,
-
-            //top: -height1*0.3,
             top: -width1 * 0.66,
             child: Container(
               height: 710,
               width: 710,
-              /// ok
-              //height: height1*0.8,
-              //width: height1*0.8,
-
-              //height: height1*0.99,
-              //width:  height1*0.99,
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 boxShadow: [BoxShadow(color: Color(0xfffdb515), blurRadius: 73, spreadRadius: 16, offset: Offset(0, 4))],
@@ -138,28 +107,11 @@ class HomeScreen extends StatelessWidget {
 
           /// Elipse 1
           Positioned(
-            //left: -150,
-            //top: -330,
-
-            ///ok
-            //left: -140,
             left: -145,
-            //top:-360 ,
-
-            //left: -width1*0.31,
-
-            //top: -height1*0.44,
             top: -width1 * 0.99,
             child: Container(
-              //height: height1*0.4,
-              //width: width1,
-              //height: 530,
-              //width: 606,
-
               height: 710,
               width: 710,
-              //height: height1*0.99,
-              //width: height1*0.99,
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 boxShadow: [BoxShadow(color: Color(0xfffdb515), blurRadius: 73, spreadRadius: 16, offset: Offset(0, 4))],
@@ -235,7 +187,7 @@ class HomeScreen extends StatelessWidget {
                       ],
                     ),
                     const Text(
-                      "Imran Mahmood",
+                      "Qaim Raza",
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 16,
