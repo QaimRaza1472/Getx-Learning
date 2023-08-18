@@ -30,11 +30,21 @@ class HomeScreen extends StatelessWidget {
 
           /// Elipse 3
           Positioned(
-            left: -145,
-            top: -width1 * 0.33,
+            //left: -145,
+
+            //left: -width1*0.5,
+            //top: -width1 * 0.27,
+
+            left: -height1*0.2,
+            top: -height1*0.08,
+            //top: -10,
+
             child: Container(
-              height: 710,
-              width: 710,
+              //height: 710,
+              //width: 710,
+              width: height1*0.9,
+              height: height1*0.9,
+
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 gradient: LinearGradient(
@@ -68,11 +78,26 @@ class HomeScreen extends StatelessWidget {
 
           /// Elipse 2
           Positioned(
-            left: -145,
-            top: -width1 * 0.66,
+            //left: -145,
+
+            //left: -width1*0.5,
+            //top: -width1 * 0.6,
+
+            //left: -150,
+            left: -height1*0.2,
+            top: -height1*0.26,
+
+
+            //top: -150,
+
+
+
             child: Container(
-              height: 710,
-              width: 710,
+              //height: 710,
+              //width: 710,
+              width: height1*0.9,
+              height: height1*0.9,
+
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 boxShadow: [BoxShadow(color: Color(0xfffdb515), blurRadius: 73, spreadRadius: 16, offset: Offset(0, 4))],
@@ -107,11 +132,31 @@ class HomeScreen extends StatelessWidget {
 
           /// Elipse 1
           Positioned(
-            left: -145,
-            top: -width1 * 0.99,
+            //left: -150,
+            left: -height1*0.2,
+
+            top: -height1*0.44,
+
+            //top: -300,
+
+
+
+            //left: -width1*0.5,
+            //top: -width1 * 0.99-5,
+            //left: -116,
+            //top: -213,
+
             child: Container(
-              height: 710,
-              width: 710,
+              //height: 710,
+              //width: 710,
+
+              width: height1*0.9,
+              height: height1*0.9,
+
+
+              //height: 606,
+             // width: 606,
+
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 boxShadow: [BoxShadow(color: Color(0xfffdb515), blurRadius: 73, spreadRadius: 16, offset: Offset(0, 4))],
@@ -126,12 +171,12 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               child: Padding(
-                padding: EdgeInsets.only(bottom: width1 * 0.16),
+                padding: EdgeInsets.only(bottom: width1 * 0.3),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     Padding(
-                      padding: EdgeInsets.only(right: width1 * 0.75, bottom: width1 * 0.045),
+                      padding: EdgeInsets.only(right: width1 * 0.7, bottom: width1 * 0.045),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -190,7 +235,7 @@ class HomeScreen extends StatelessWidget {
                       "Qaim Raza",
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 16,
+                        fontSize: 18,
                       ),
                     ),
                     const SizedBox(

@@ -34,9 +34,9 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      //home:const HomeScreen(),
+      home:const HomeScreen(),
 
-       home: ChangePasswordDialog(),
+       //home: ChangePasswordDialog(),
 
       //home: OtpDialog(),
 
