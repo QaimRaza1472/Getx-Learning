@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_learning/Controller/binding.dart';
-
+import 'package:getx_learning/pop_up1.dart';
 import 'Controller/increment_controller.dart';
+import 'home_screen.dart';
+import 'otp_dialogue.dart';
+
+
 
 void main() {
   runApp(const MyApp());
@@ -11,11 +15,11 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
-
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+      debugShowCheckedModeBanner: false,
       initialBinding: StoreBinding(),
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -30,7 +34,13 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home:const HomeScreen(),
+
+       //home: ChangePasswordDialog(),
+
+      //home: OtpDialog(),
+
+      //home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
   }
 }
