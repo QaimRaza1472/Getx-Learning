@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_learning/Controller/binding.dart';
-import 'package:getx_learning/pop_up1.dart';
+import 'package:getx_learning/Office/pop_up1.dart';
 import 'Controller/increment_controller.dart';
-import 'home_screen.dart';
-import 'home_screen3.dart';
-import 'otp_dialogue.dart';
+import 'GetxLearning/counter_page.dart';
+import 'Office/home_screen.dart';
+import 'Office/home_screen3.dart';
+import 'Office/otp_dialogue.dart';
 
 
 
@@ -42,81 +43,9 @@ class MyApp extends StatelessWidget {
 
       //home: OtpDialog(),
 
-      home: const CounterPage(title: 'Flutter Demo Home Page'),
+      home:  const CounterPage(title: 'Flutter Demo Home Page'),
     );
   }
 }
 
 
-class CounterPage extends StatefulWidget {
-  const CounterPage({super.key, required this.title});
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  final String title;
-
-  @override
-  State<CounterPage> createState() => _CounterPageState();
-}
-
-class _CounterPageState extends State<CounterPage> {
-
-  final counterController = Get.find<CounterController>();
-
-  @override
-  Widget build(BuildContext context) {
-
-
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
-    return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body:GetBuilder<CounterController>(
-        builder: (_) => Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              const Text(
-                'You have pushed the button this many times:',
-              ),
-              Text(
-                  'With GetBuilder: ${counterController.count.toString()}',
-                  textAlign: TextAlign.start,
-                  style: const TextStyle(
-                      fontSize: 22, fontWeight: FontWeight.bold,
-                  ),
-                ),
-
-              Text(
-                counterController.count.toString(),
-                style: Theme.of(context).textTheme.headlineMedium,
-              ),
-            ],
-          ),
-        ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: (){
-          counterController.increment();
-        },
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
-    );
-  }
-}
