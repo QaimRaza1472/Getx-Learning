@@ -1,16 +1,19 @@
 import 'package:flutter/material.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class HomeScreen3 extends StatelessWidget {
+  const HomeScreen3({super.key});
 
   @override
   Widget build(BuildContext context) {
     var height1 = MediaQuery.of(context).size.height;
     var width1 = MediaQuery.of(context).size.width;
+    var left1=-width1*0.5;
+
     return Scaffold(
-      drawer: Drawer(),
+      drawer: const Drawer(),
       body: Stack(
         children: [
+
           Container(
             height: height1,
             width: width1,
@@ -22,34 +25,19 @@ class HomeScreen extends StatelessWidget {
                   Colors.red.shade500,
                   Colors.yellow.shade900,
                   Colors.yellow.shade900,
-                  Colors.yellow.shade700,
+                  Colors.yellow.shade800,
                 ],
               ),
             ),
           ),
 
-
           /// Elipse 3
           Positioned(
-            //left: -145,
-            //left: -132,
-
-            //left: -height1/3.8+width1*0.03,
-            left: -height1*0.14-width1*0.09,
-
-            //left: -width1*0.314-72,
-            //top: -width1 * 0.27,
-
-            //left: -height1*0.2,
-            top: -height1*0.08,
-            //top: -10,
-
+            left:left1,
+            top: -width1*0.39,
             child: Container(
-              //height: 710,
-              //width: 710,
-              width: height1*0.99,
-              height: height1*0.99,
-
+              height: width1+width1,
+              width: width1+width1,
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 gradient: LinearGradient(
@@ -59,13 +47,15 @@ class HomeScreen extends StatelessWidget {
                     Color(0xdcfdb515),
                     Color(0xdcf4791b),
                     Color(0xdcEA3721),
+                    Color(0xdcEA3721),
                   ],
                 ),
               ),
               child: Padding(
-                padding: EdgeInsets.only(bottom: width1 * 0.16),
+                padding: EdgeInsets.only(bottom: width1 * 0.17),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: const [
                     Text(
                       "Check Your Password",
@@ -83,28 +73,11 @@ class HomeScreen extends StatelessWidget {
 
           /// Elipse 2
           Positioned(
-            //left: -145,
-            //left: -132,
-            left: -height1*0.14-width1*0.09,
-            //left: -width1*0.314-72,
-            //top: -width1 * 0.6,
-
-            //left: -150,
-
-            //left: -height1*0.2,
-            top: -height1*0.26,
-
-
-            //top: -150,
-
-
-
+            left: left1,
+            top: -width1*0.77,
             child: Container(
-              //height: 710,
-              //width: 710,
-              width: height1*0.99,
-              height: height1*0.99,
-
+              height: width1+width1,
+              width: width1+width1,
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 boxShadow: [BoxShadow(color: Color(0xfffdb515), blurRadius: 73, spreadRadius: 16, offset: Offset(0, 4))],
@@ -115,12 +88,14 @@ class HomeScreen extends StatelessWidget {
                     Color(0xdcfdb515),
                     Color(0xdcf4791b),
                     Color(0xdcEA3721),
+                    Color(0xdcEA3721),
                   ],
                 ),
               ),
               child: Padding(
-                padding: EdgeInsets.only(bottom: width1 * 0.16),
+                padding: EdgeInsets.only(bottom: width1 * 0.17),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: const [
                     Text(
@@ -139,33 +114,11 @@ class HomeScreen extends StatelessWidget {
 
           /// Elipse 1
           Positioned(
-            //left: -132,
-            left: -height1*0.14-width1*0.09,
-            //left: -width1*0.314-72,
-            //left: -height1*0.2,
-
-            top: -height1*0.44,
-
-            //top: -300,
-
-
-
-            //left: -width1*0.5,
-            //top: -width1 * 0.99-5,
-            //left: -116,
-            //top: -213,
-
+            left: left1,
+            top: -width1-width1*0.16,
             child: Container(
-              //height: 710,
-              //width: 710,
-
-              width: height1*0.99,
-              height: height1*0.99,
-
-
-              //height: 606,
-             // width: 606,
-
+              height: width1+width1,
+              width: width1+width1,
               decoration: const BoxDecoration(
                 shape: BoxShape.circle,
                 boxShadow: [BoxShadow(color: Color(0xfffdb515), blurRadius: 73, spreadRadius: 16, offset: Offset(0, 4))],
@@ -173,19 +126,21 @@ class HomeScreen extends StatelessWidget {
                   begin: Alignment.topCenter,
                   end: Alignment.bottomLeft,
                   colors: [
-                    Color(0xdcfdb515),
-                    Color(0xdcf4791b),
-                    Color(0xdcEA3721),
+                    Color(0xDCFDB515),
+                    Color(0xDCF4791B),
+                    Color(0xDCEA3721),
+                    Color(0xDCEA3721),
                   ],
                 ),
               ),
               child: Padding(
-                padding: EdgeInsets.only(bottom: width1 * 0.3),
+                padding: EdgeInsets.only(bottom: width1 * 0.18),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Padding(
-                      padding: EdgeInsets.only(right: width1 * 0.7, bottom: width1 * 0.045),
+                      padding: EdgeInsets.only(right: width1 * 0.72, bottom: width1*0.07),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
@@ -195,6 +150,7 @@ class HomeScreen extends StatelessWidget {
                               color: Colors.white,
                             ),
                             onPressed: () {
+
                             },
                           ),
                           const SizedBox(width: 7),

@@ -4,6 +4,7 @@ import 'package:getx_learning/Controller/binding.dart';
 import 'package:getx_learning/pop_up1.dart';
 import 'Controller/increment_controller.dart';
 import 'home_screen.dart';
+import 'home_screen3.dart';
 import 'otp_dialogue.dart';
 
 
@@ -34,7 +35,8 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home:const HomeScreen(),
+      //home:const HomeScreen(),
+       home: HomeScreen3(),
 
        //home: ChangePasswordDialog(),
 
