@@ -36,20 +36,20 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       //home:const HomeScreen(),
-       home: HomeScreen3(),
+       //home: HomeScreen3(),
 
        //home: ChangePasswordDialog(),
 
       //home: OtpDialog(),
 
-      //home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const CounterPage(title: 'Flutter Demo Home Page'),
     );
   }
 }
 
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+class CounterPage extends StatefulWidget {
+  const CounterPage({super.key, required this.title});
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -63,10 +63,10 @@ class MyHomePage extends StatefulWidget {
   final String title;
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<CounterPage> createState() => _CounterPageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _CounterPageState extends State<CounterPage> {
 
   final counterController = Get.find<CounterController>();
 
@@ -87,23 +87,23 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body:GetBuilder<CounterController>(
-        builder: (n) => Center(
+        builder: (_) => Center(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               const Text(
                 'You have pushed the button this many times:',
               ),
-              GetBuilder<CounterController>(
-                builder: (counterController) => Text(
+              Text(
                   'With GetBuilder: ${counterController.count.toString()}',
                   textAlign: TextAlign.start,
                   style: const TextStyle(
-                      fontSize: 22, fontWeight: FontWeight.bold),
+                      fontSize: 22, fontWeight: FontWeight.bold,
+                  ),
                 ),
-              ),
+
               Text(
-                n.count.toString(),
+                counterController.count.toString(),
                 style: Theme.of(context).textTheme.headlineMedium,
               ),
             ],
@@ -111,7 +111,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed:(){
+        onPressed: (){
           counterController.increment();
         },
         tooltip: 'Increment',
